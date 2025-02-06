@@ -1,0 +1,35 @@
+﻿@page
+@model OnlineChat.Pages.SendMessageModel
+@{
+	ViewData["Title"] = "Отправить сообщение";
+}
+
+<h2>Отправить сообщение</h2>
+
+<form method="post">
+	<textarea asp-for="Message" placeholder="Введите ваше сообщение..."></textarea>
+	<button type="Отправить">Отправить</button>
+</form>
+
+@section Scripts {
+            <script>
+        let orderCounter = 1;
+
+        document.querySelector("form").onsubmit = async (event) => {
+            event.preventDefault();
+            const message = document.querySelector("textarea").value;
+
+            await fetch('/api/message', {
+                method: 'POST',
+                body: JSON.stringify({
+                    messageNubmer: orderCounter++,
+                    content: message 
+                }), 
+                headers: { 'Content-Type': 'application/json' }
+            });
+
+            document.querySelector("textarea").value = ''; 
+        };
+    </script>
+
+}

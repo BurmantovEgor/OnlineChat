@@ -1,0 +1,29 @@
+﻿@page
+@model OnlineChat.Pages.ReceiveMessageModel
+@{
+    ViewData["Title"] = "Новые сообщения";
+}
+
+<h2>Список сообщений:</h2>
+<div id="messagesList"></div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/messageHub") 
+            .build();
+
+        connection.start().then(function () {
+            console.log("SignalR connected");
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        connection.on("ReceiveMessage", function (message) {
+            const messageElement = document.createElement("p");
+            messageElement.textContent = message; 
+            document.getElementById("messagesList").appendChild(messageElement);
+        });
+    </script>
+}

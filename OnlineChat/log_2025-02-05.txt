@@ -1,0 +1,89 @@
+[17:03:22] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0304448 ms, RequestBody: 
+[17:03:22] IP: ::1, GET /api/message -> 400, Time: 00:00:00.4586962 ms, RequestBody: 
+[17:03:37] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0348807 ms, RequestBody: {
+  "content": "string"
+}
+[17:03:59] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0052612 ms, RequestBody: {
+  "content": "string"
+}
+[17:04:03] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0035137 ms, RequestBody: {
+  "content": "string"
+}
+[17:04:09] IP: ::1, GET /api/message -> 200, Time: 00:00:00.0210003 ms, RequestBody: 
+[17:07:26] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0227866 ms, RequestBody: 
+[17:07:39] IP: ::1, GET /SendMessage;ReceiveMessage;GetLastMessages -> 404, Time: 00:00:00.0162891 ms, RequestBody: 
+[17:07:47] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0089146 ms, RequestBody: 
+[17:07:56] IP: ::1, GET /swagger;SendMessage;ReceiveMessage;GetLastMessages -> 404, Time: 00:00:00.0218946 ms, RequestBody: 
+[17:08:05] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0080213 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.1338814 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js -> 304, Time: 00:00:00.0064789 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /lib/jquery/dist/jquery.min.js -> 304, Time: 00:00:00.0064674 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /js/site.js -> 304, Time: 00:00:00.0064683 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /Error -> 500, Time: 00:00:00.0050309 ms, RequestBody: 
+[17:09:38] IP: ::1, GET /Error -> 500, Time: 00:00:00.0050309 ms, RequestBody: 
+[17:09:39] IP: ::1, GET /favicon.ico -> 304, Time: 00:00:00.0002375 ms, RequestBody: 
+[17:09:45] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.0074781 ms, RequestBody: 
+[17:09:45] IP: ::1, GET /OnlineChat.styles.css -> 200, Time: 00:00:00.0090292 ms, RequestBody: 
+[17:09:45] IP: ::1, GET /lib/bootstrap/dist/css/bootstrap.min.css -> 200, Time: 00:00:00.0337430 ms, RequestBody: 
+[17:09:47] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0046128 ms, RequestBody: 
+[17:09:47] IP: ::1, GET /api/message -> 200, Time: 00:00:00.2789241 ms, RequestBody: 
+[17:09:54] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.0071817 ms, RequestBody: 
+[17:09:55] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0002993 ms, RequestBody: 
+[17:09:56] IP: ::1, GET /SendMessage -> 200, Time: 00:00:00.0275885 ms, RequestBody: 
+[17:09:56] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0002058 ms, RequestBody: 
+[17:09:59] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0386683 ms, RequestBody: {"content":"123"}
+[17:10:39] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.0946370 ms, RequestBody: 
+[17:10:39] IP: ::1, GET /SendMessage -> 200, Time: 00:00:00.1014803 ms, RequestBody: 
+[17:10:40] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0160420 ms, RequestBody: 
+[17:10:46] IP: ::1, POST /api/message -> 200, Time: 00:00:00.4398804 ms, RequestBody: {"content":"123"}
+[17:10:48] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0002569 ms, RequestBody: 
+[17:10:50] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.0053380 ms, RequestBody: 
+[17:10:51] IP: ::1, GET /api/message -> 200, Time: 00:00:00.0263523 ms, RequestBody: 
+[17:10:56] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0091800 ms, RequestBody: {"content":"cvxcvzxv"}
+[17:11:05] IP: ::1, POST /api/message -> 200, Time: 00:00:00.0029942 ms, RequestBody: {"content":"cxvzxcv"}
+[17:11:08] IP: ::1, GET /api/message -> 200, Time: 00:00:00.0010988 ms, RequestBody: 
+[17:10:40] IP: ::1, CONNECT /messageHub -> 200, Time: 00:00:37.7328767 ms, RequestBody: 
+[17:11:24] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.0024897 ms, RequestBody: 
+[17:13:54] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.1042331 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[17:13:56] IP: ::1, GET /SendMessage -> 200, Time: 00:00:00.0315914 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[17:13:57] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0069534 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[17:13:57] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.0064086 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[17:13:58] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0002603 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[17:14:00] IP: ::1, POST /api/message -> 200, Time: 00:00:00.2478445 ms, RequestBody: Microsoft.AspNetCore.WebUtilities.FileBufferingReadStream
+[18:14:52] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2171533 ms, RequestBody: 
+[18:15:20] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2396927 ms, RequestBody: 
+[18:16:21] IP: ::1, POST /Error -> 500, Time: 00:00:00.0132888 ms, RequestBody: 
+[18:17:10] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.2026465 ms, RequestBody: 
+[18:17:10] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2306464 ms, RequestBody: 
+[18:17:11] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0202370 ms, RequestBody: 
+[18:18:50] IP: ::1, POST /Error -> 500, Time: 00:00:00.0115229 ms, RequestBody: 
+[18:20:59] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2023631 ms, RequestBody: 
+[18:21:15] IP: ::1, POST /Error -> 500, Time: 00:00:00.0166464 ms, RequestBody: 
+[18:22:24] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2122259 ms, RequestBody: 
+[18:22:39] IP: ::1, POST /Error -> 500, Time: 00:00:00.0124197 ms, RequestBody: 
+[18:30:09] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.2011767 ms, RequestBody: 
+[18:30:09] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2291017 ms, RequestBody: 
+[18:30:11] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0262543 ms, RequestBody: 
+[18:30:25] IP: ::1, POST /Error -> 500, Time: 00:00:00.0121934 ms, RequestBody: 
+[18:31:14] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2162876 ms, RequestBody: 
+[18:31:26] IP: ::1, POST /Error -> 500, Time: 00:00:00.0154137 ms, RequestBody: 
+[18:34:19] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.3994594 ms, RequestBody: 
+[18:34:19] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.4474787 ms, RequestBody: 
+[18:34:22] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0217317 ms, RequestBody: 
+[18:34:27] IP: ::1, POST /Error -> 500, Time: 00:00:00.0094785 ms, RequestBody: 
+[18:34:31] IP: ::1, POST /Error -> 500, Time: 00:00:00.0018065 ms, RequestBody: 
+[18:36:31] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.2055495 ms, RequestBody: 
+[18:36:31] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2165989 ms, RequestBody: 
+[18:36:33] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0243110 ms, RequestBody: 
+[18:36:43] IP: ::1, POST /Error -> 500, Time: 00:00:00.0110048 ms, RequestBody: 
+[18:38:03] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.1701819 ms, RequestBody: 
+[18:38:03] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.1980864 ms, RequestBody: 
+[18:38:05] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0238556 ms, RequestBody: 
+[18:38:13] IP: ::1, POST /Error -> 500, Time: 00:00:00.0110079 ms, RequestBody: 
+[18:39:00] IP: ::1, GET /ReceiveMessage -> 200, Time: 00:00:00.1890139 ms, RequestBody: 
+[18:39:00] IP: ::1, GET /GetLastMessages -> 200, Time: 00:00:00.2015824 ms, RequestBody: 
+[18:39:02] IP: ::1, POST /messageHub/negotiate -> 200, Time: 00:00:00.0344925 ms, RequestBody: 
+[18:39:05] IP: ::1, POST /api/message -> 200, Time: 00:00:08.0821610 ms, RequestBody: {
+  "messageNubmer": 0,
+  "content": "string"
+}

@@ -1,0 +1,38 @@
+
+services:
+  web:
+    image: your-app-name
+    build: .
+    ports:
+      - "7027:7027"  
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+      - db  
+
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: OnlineChatDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"  
+
+  client_launcher:
+    image: selenium/standalone-chrome
+    container_name: client-launcher
+    depends_on:
+      - web
+    entrypoint: >
+      bash -c "
+        sleep 10;
+        curl --silent --show-error https://localhost:7027/SendMessage;
+        curl --silent --show-error https://localhost:7027/ReceiveMessage;
+        curl --silent --show-error https://localhost:7027/GetLastMessages;
+      "
+    
+volumes:
+  postgres_data:

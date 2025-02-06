@@ -1,0 +1,32 @@
+﻿@page
+@model OnlineChat.Pages.GetLastMessagesModel
+@{
+    ViewData["Title"] = "Сообщения за последние 10 минут";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<button id="getMessagesButton">Получить сообщения за последние 10 минут</button>
+
+<div id="messagesContainer"></div>
+
+@section Scripts {
+    <script>
+        document.getElementById("getMessagesButton").onclick = async () => {
+            const response = await fetch('/api/message?last10Minutes=true');
+            if (response.ok) {
+                const data = await response.json();
+                console.log("Полученные сообщения:", data);
+                const container = document.getElementById("messagesContainer");
+                container.innerHTML = '';
+                data.forEach(msg => {
+                    const p = document.createElement("p");
+                    p.textContent = `${msg.messageNubmer}) ${msg.date}: ${msg.content}`;
+                    container.appendChild(p);
+                });
+            } else {
+                console.error("Ошибка запроса:", response.status);
+            }
+        };
+    </script>
+}
