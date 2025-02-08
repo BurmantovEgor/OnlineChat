@@ -2,7 +2,7 @@
 {
     public class MessageAddDTO
     {
-        public int MessageNubmer { get; set; }
+        public int MessageNumber { get; set; }
         public string Content { get; set; }
     }
 }

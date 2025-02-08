@@ -10,8 +10,6 @@ using OnlineChat.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
-builder.Services.AddHostedService<BrowserLauncherService>();
-
 builder.Services.AddAutoMapper(typeof(MessageMapper));
 
 builder.Services.AddControllers();
@@ -19,9 +17,14 @@ builder.Services.AddControllers();
 builder.Services.AddSignalR();
 
 builder.Services.AddSingleton(sp =>
-    builder.Configuration.GetConnectionString("DefaultConnection"));
+    builder.Configuration.GetConnectionString("DefaultConnection")
+    );
+    
 builder.Services.AddDbContext<OnlineChatDBContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+        ));
+    
 builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 

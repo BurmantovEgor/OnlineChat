@@ -6,18 +6,10 @@ namespace OnlineChat.Pages
     public class SendMessageModel : PageModel
     {
         [BindProperty]
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
 
-        public IActionResult OnPost()
+        public void OnPost()
         {
-            if (string.IsNullOrEmpty(Message))
-            {
-                ModelState.AddModelError(string.Empty, "Message cannot be empty.");
-                return Page();
-            }
-
-
-            return RedirectToPage("ReceiveMessage"); 
         }
     }
 }

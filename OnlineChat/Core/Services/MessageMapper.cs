@@ -13,12 +13,12 @@ namespace OnlineChat.Core.Services
                 .ForMember(dest => dest.id, opt => opt.MapFrom(src => Guid.NewGuid()))
                 .ForMember(dest => dest.date, opt => opt.MapFrom(src => DateTime.UtcNow))
                 .ForMember(dest => dest.content, opt => opt.MapFrom(src => src.Content))
-                .ForMember(dest => dest.message_num, opt => opt.MapFrom(src => src.MessageNubmer));
+                .ForMember(dest => dest.message_num, opt => opt.MapFrom(src => src.MessageNumber));
 
             CreateMap<MessageEntity, MessageGetDTO>()
                 .ForMember(dest => dest.Content, opt => opt.MapFrom(src => src.content))
                 .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.date))
-                .ForMember(dest => dest.MessageNubmer, opt => opt.MapFrom(src => src.message_num));
+                .ForMember(dest => dest.MessageNumber, opt => opt.MapFrom(src => src.message_num));
 
         }
 

@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder.Extensions;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using OnlineChat.Applicaton.DTO_s;
 using OnlineChat.Core.Abstactions;
-using OnlineChat.Core.DTO_s;
 using OnlineChat.Core.Services;
 
 namespace OnlineChat.Applicaton.Controllers
@@ -13,12 +11,10 @@ namespace OnlineChat.Applicaton.Controllers
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _messageService;
-        private readonly IHubContext<MessageHub> _hubContext;
 
-        public MessageController(IMessageService service, IHubContext<MessageHub> hubContext)
+        public MessageController(IMessageService service)
         {
             _messageService = service;
-            _hubContext = hubContext;
         }
 
         [HttpPost]
@@ -26,7 +22,6 @@ namespace OnlineChat.Applicaton.Controllers
         {
             var reuslt = await _messageService.SaveMessage(message);
             if (reuslt.IsFailure) return BadRequest(new { error = reuslt.Error });
-            await _hubContext.Clients.All.SendAsync("ReceiveMessage", message.Content);
             return Ok(message);
         }
 
@@ -37,6 +32,5 @@ namespace OnlineChat.Applicaton.Controllers
             if (result.IsFailure) return BadRequest(new { error = result.Error });
             return Ok(result.Value);
         }
-
     }
 }
