@@ -1,22 +1,21 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-LABEL maintainer="your_email@example.com"
-LABEL description="OnlineChat ASP.NET application"
-
-WORKDIR /src
-
-COPY *.csproj ./
-RUN dotnet restore
-
-COPY . ./
-RUN dotnet build -c Release --no-restore
-RUN dotnet publish -c Release -o /app/publish --no-build
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
-
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-COPY --from=build /app/publish .
-
 EXPOSE 7027
+EXPOSE 80
 
-CMD ["dotnet", "OnlineChat.dll"]
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["OnlineChat.csproj", "./"]
+RUN dotnet restore "OnlineChat.csproj"
+COPY . .
+
+WORKDIR "/src"
+RUN dotnet build "OnlineChat.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "OnlineChat.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish ./
+ENTRYPOINT ["dotnet", "OnlineChat.dll"]
